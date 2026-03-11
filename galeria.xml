@@ -1,0 +1,13 @@
+<galeria xmlns="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation="galeria.xsd">
+        -- contenido de los elementos de ejemplo
+    <elemento>
+        <titulo>Foto 1</titulo>
+        <categoria>Natureza</categoria>
+        <año>2020</año>
+        <descripcion>Uma bela paisagem de montanhas e um lago.</descripcion>
+        <imagem>foto1.jpg</imagem>
+    
+    </elemento>
+
+</galeria>
