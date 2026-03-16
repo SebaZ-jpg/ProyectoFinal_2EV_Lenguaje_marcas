@@ -1,56 +1,184 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Reset básico */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #000000;
-    line-height: 1.6;
+body{
+    background:#0f0f0f;
+    color:#f5f5f5;
 }
 
-.productos-container {
-    display: grid;
-    grid-template-areas:
-        "header"
-        "hero"
-        "proyectos"
-        "sobre-mi"
-        "footer";
-    grid-template-rows: auto auto auto auto auto;
-    min-height: 100vh;
+/* Contenedor principal */
+.productos-container{
+    width:100%;
 }
 
-/* Header */
-.header {
-    grid-area: header;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    padding: 1rem 5%;
-    background-color: #1e1f2e;
-    color: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+/* HEADER */
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:#111;
+    border-bottom:1px solid #333;
 }
 
-.hero {
-    grid-area: hero;
-    display: grid;
-    place-items: center;
-    text-align: center;
-    padding: 5rem 2rem;
-    background: linear-gradient(135deg, #8ba5a2 0%, #245833 100%);
-    color: white;
+.logo{
+    font-size:24px;
+    font-weight:bold;
+    color:#d4af37; /* dorado */
+    letter-spacing:2px;
 }
 
-.hero button {
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
-    background-color: white;
-    color: #1c8353;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: transform 0.3s;
+.nav a{
+    margin-left:25px;
+    text-decoration:none;
+    color:#f5f5f5;
+    font-size:15px;
+    transition:0.3s;
+}
+
+.nav a:hover{
+    color:#d4af37;
+}
+
+/* HERO */
+.hero{
+    height:70vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+               url("../img/fondo4.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero h1{
+    font-size:60px;
+    margin-bottom:10px;
+    letter-spacing:3px;
+}
+
+.hero p{
+    font-size:18px;
+    margin-bottom:25px;
+    color:#ccc;
+}
+
+.hero button{
+    padding:12px 28px;
+    border:none;
+    background:#d4af37;
+    color:#000;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:4px;
+    transition:0.3s;
+}
+
+.hero button:hover{
+    background:#f1c84b;
+}
+
+/* SECCIÓN RELOJES */
+.relojes{
+    padding:80px 60px;
+}
+
+.relojes h2{
+    text-align:center;
+    margin-bottom:50px;
+    font-size:32px;
+    letter-spacing:1px;
+}
+
+/* GRID */
+.relojes-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+    gap:30px;
+}
+
+/* TARJETAS */
+.relojes-grid div{
+    background:#181818;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    transition:0.3s;
+    border:1px solid #2a2a2a;
+}
+
+.relojes-grid div:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* IMÁGENES */
+.relojes-grid img{
+    width:100%;
+    border-radius:8px;
+    margin-bottom:15px;
+}
+
+/* TITULO PRODUCTO */
+.relojes-grid h3{
+    margin-bottom:10px;
+    color:#d4af37;
+}
+
+/* TEXTO */
+.relojes-grid p{
+    font-size:14px;
+    color:#ccc;
+    line-height:1.5;
+}
+
+/* PRECIO */
+.precio{
+    margin-top:10px;
+    font-size:18px;
+    font-weight:bold;
+    color:#ffffff;
+}
+
+/* SECCIÓN LEGALES */
+.legales{
+    background:#111;
+    padding:60px;
+    text-align:center;
+    border-top:1px solid #333;
+}
+
+.legales h2{
+    margin-bottom:15px;
+}
+
+/* FOOTER */
+.footer{
+    background:#0a0a0a;
+    padding:25px;
+    text-align:center;
+    border-top:1px solid #222;
+}
+
+.footer p{
+    margin-bottom:10px;
+}
+
+.social a{
+    margin:0 10px;
+    text-decoration:none;
+    color:#d4af37;
+    transition:0.3s;
+}
+
+.social a:hover{
+    color:#ffffff;
 }
