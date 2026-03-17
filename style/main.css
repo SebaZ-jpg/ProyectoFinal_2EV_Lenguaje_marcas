@@ -137,8 +137,6 @@ select {
     min-height: 100vh; /* Para ocupar espacio */
 }
 
-
-
 .titulo-seccion {
     text-align: center;
     margin-bottom: 50px;
@@ -149,7 +147,9 @@ select {
 
 .relojes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
+    align-items: stretch;
+    justify-content: center;
     gap: 30px;
 }
 
@@ -159,13 +159,12 @@ select {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    transition: 0.3s;
     border: 1px solid var(--border-color);
-    
-    /* FLEXBOX EN COLUMNA */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 300px;         
+      
 }
 
 .tarjeta-reloj:hover {
@@ -176,25 +175,27 @@ select {
 
 .tarjeta-reloj img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    aspect-ratio: 1 / 1;        
+    object-fit: contain;
     border-radius: 8px;
     margin-bottom: 15px;
     background-color: #fff; /* Fondo blanco para imágenes PNG transparentes */
 }
 
-.tarjeta-reloj h3 {
+.tarjeta-reloj h2 {
     margin-bottom: 10px;
     color: var(--accent-color);
     font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .tarjeta-reloj p {
     font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.5;
-    margin-bottom: 15px;
-    flex-grow: 1; /* Empuja el precio hacia abajo si hay espacio */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* =========================================

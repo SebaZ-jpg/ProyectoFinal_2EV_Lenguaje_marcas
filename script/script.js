@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         div.innerHTML = `
             <img src="${rutaImagen}" alt="${titulo}">
-            <h3>${titulo}</h3>
+            <h2>${titulo}</h2>
             <p>${texto}</p>
         `;
         
