@@ -5,7 +5,7 @@
     <reloj>
         <titulo>Rolex Daydate Rose Gold 40mm Ombre Black 228235 Oro rosa Negro 40mm 2025</titulo>
         <texto>El Rolex Day-Date 40 ref. 228235 en oro rosa con esfera ombré negra es la combinación perfecta de lujo y elegancia. Su exclusivo acabado en oro Everose de 18k y su distintiva esfera degradada lo convierten en una pieza sofisticada y muy deseada.</texto>
-        <imagen>img/rolex-day-time.png</imagen>
+        <imagen>img/rolex-day-date.png</imagen>
     </reloj>
 
     <reloj>
@@ -47,7 +47,7 @@
     <reloj>
         <titulo>Tissot PRX</titulo>
         <texto>El Tissot PRX es un reloj de lujo que combina estilo y funcionalidad en un diseño atemporal. Con su caja de acero inoxidable, esfera con indicadores de hora y minutero, y su movimiento automático, este reloj es una elección perfecta para quienes buscan calidad y durabilidad en su accesorio.</texto>
-        <imagen>img/reloj1.png</imagen>
+        <imagen>img/reloj1.jpg</imagen>
     </reloj>
 
 </relojes>

@@ -133,9 +133,11 @@ select {
    GALERÍA PRINCIPAL (GRID)
    ========================================= */
 .galeria-contenido {
-    padding: 60px;
-    min-height: 80vh; /* Para ocupar espacio */
+    padding: 40px;
+    min-height: 100vh; /* Para ocupar espacio */
 }
+
+
 
 .titulo-seccion {
     text-align: center;
@@ -147,7 +149,7 @@ select {
 
 .relojes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
 }
 
