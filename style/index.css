@@ -70,6 +70,7 @@ h1 {
     transition: all 0.3s ease;
     text-decoration: none; /* Por si usas <a> */
     display: inline-block;
+    margin-top: 250px;
 }
 
 /* Animación de Rebote Mejorada */
