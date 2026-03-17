@@ -1,184 +1,379 @@
-/* Reset básico */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/* =========================================
+   VARIABLES CSS (SISTEMA DE TEMAS)
+   ========================================= */
+:root {
+    /* TEMA OSCURO (Por defecto, tu diseño actual) */
+    --bg-body: rgb(0, 64, 46);
+    --bg-header: rgb(0, 64, 46);
+    --bg-card: #181818;
+    --bg-footer: #0a0a0a;
+    --text-main: #f5f5f5;
+    --text-secondary: #ccc;
+    --accent-color: #d4af37; /* Dorado */
+    --border-color: #333;
+    --shadow-color: rgba(0,0,0,0.6);
+}
+
+/* TEMA CLARO (Nuevo) */
+body.tema-claro {
+    --bg-body: #f4f4f4;
+    --bg-header: #ffffff;
+    --bg-card: #ffffff;
+    --bg-footer: #1a1a1a; /* El footer se mantiene oscuro para contraste */
+    --text-main: #1a1a1a;
+    --text-secondary: #555555;
+    --accent-color: #b8860b; /* Dorado un poco más oscuro para fondo claro */
+    --border-color: #e0e0e0;
+    --shadow-color: rgba(0,0,0,0.1);
+}
+
+/* TEMA PERSONALIZADO (Se aplicará vía JS inline o clases específicas) */
+/* Las variables se sobrescribirán dinámicamente */
+
+/* =========================================
+   RESET Y BASE
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: "Segoe UI", Arial, sans-serif;
+    transition: background-color 0.4s ease, color 0.4s ease; /* Suaviza el cambio de tema */
 }
 
-body{
-    background:#0f0f0f;
-    color:#f5f5f5;
+body {
+    background: var(--bg-body);
+    color: var(--text-main);
+    width: 100%;
+    overflow-x: hidden;
 }
 
-/* Contenedor principal */
-.productos-container{
-    width:100%;
+/* =========================================
+   HEADER (Adaptado a tu diseño)
+   ========================================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: var(--bg-header);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-/* HEADER */
-.header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 60px;
-    background:#111;
-    border-bottom:1px solid #333;
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--accent-color);
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-.logo{
-    font-size:24px;
-    font-weight:bold;
-    color:#d4af37; /* dorado */
-    letter-spacing:2px;
+/* Navegación (Opcional, si la usas en main.html) */
+.nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 15px;
+    transition: 0.3s;
 }
 
-.nav a{
-    margin-left:25px;
-    text-decoration:none;
-    color:#f5f5f5;
-    font-size:15px;
-    transition:0.3s;
+.nav a:hover {
+    color: var(--accent-color);
 }
 
-.nav a:hover{
-    color:#d4af37;
+/* Controles del Header (Buscador, Tema, Añadir) */
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-/* HERO */
-.hero{
-    height:70vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    background:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-               url("../img/fondo4.jpg");
-    background-size:cover;
-    background-position:center;
+.buscar-container {
+    display: flex;
+    gap: 5px;
 }
 
-.hero h1{
-    font-size:60px;
-    margin-bottom:10px;
-    letter-spacing:3px;
+.buscar-container input {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+    color: var(--text-main);
 }
 
-.hero p{
-    font-size:18px;
-    margin-bottom:25px;
-    color:#ccc;
+.buscar-container button, 
+#btnAñadir, 
+select {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    background: var(--accent-color);
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
 }
 
-.hero button{
-    padding:12px 28px;
-    border:none;
-    background:#d4af37;
-    color:#000;
-    font-weight:bold;
-    cursor:pointer;
-    border-radius:4px;
-    transition:0.3s;
+.buscar-container button:hover, 
+#btnAñadir:hover {
+    transform: scale(1.05);
+    background: #f1c84b;
 }
 
-.hero button:hover{
-    background:#f1c84b;
+select {
+    background: #fff;
+    color: #333;
+    cursor: pointer;
 }
 
-/* SECCIÓN RELOJES */
-.relojes{
-    padding:80px 60px;
+/* =========================================
+   GALERÍA PRINCIPAL (GRID)
+   ========================================= */
+.galeria-contenido {
+    padding: 60px;
+    min-height: 80vh; /* Para ocupar espacio */
 }
 
-.relojes h2{
-    text-align:center;
-    margin-bottom:50px;
-    font-size:32px;
-    letter-spacing:1px;
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 32px;
+    letter-spacing: 1px;
+    color: var(--accent-color);
 }
 
-/* GRID */
-.relojes-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
-    gap:30px;
+.relojes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
 }
 
-/* TARJETAS */
-.relojes-grid div{
-    background:#181818;
-    padding:20px;
-    border-radius:10px;
-    text-align:center;
-    transition:0.3s;
-    border:1px solid #2a2a2a;
+/* TARJETAS (Flexbox interno) */
+.tarjeta-reloj {
+    background: var(--bg-card);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid var(--border-color);
+    
+    /* FLEXBOX EN COLUMNA */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.relojes-grid div:hover{
-    transform:translateY(-8px);
-    box-shadow:0 10px 25px rgba(0,0,0,0.6);
+.tarjeta-reloj:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px var(--shadow-color);
+    border-color: var(--accent-color);
 }
 
-/* IMÁGENES */
-.relojes-grid img{
-    width:100%;
-    border-radius:8px;
-    margin-bottom:15px;
+.tarjeta-reloj img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #fff; /* Fondo blanco para imágenes PNG transparentes */
 }
 
-/* TITULO PRODUCTO */
-.relojes-grid h3{
-    margin-bottom:10px;
-    color:#d4af37;
+.tarjeta-reloj h3 {
+    margin-bottom: 10px;
+    color: var(--accent-color);
+    font-size: 1.2rem;
 }
 
-/* TEXTO */
-.relojes-grid p{
-    font-size:14px;
-    color:#ccc;
-    line-height:1.5;
+.tarjeta-reloj p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Empuja el precio hacia abajo si hay espacio */
 }
 
-/* PRECIO */
-.precio{
-    margin-top:10px;
-    font-size:18px;
-    font-weight:bold;
-    color:#ffffff;
+/* =========================================
+   FOOTER MEJORADO (Información Extra)
+   ========================================= */
+.footer {
+    background: var(--bg-footer);
+    padding: 60px 60px 20px 60px;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+    font-size: 0.9rem;
 }
 
-/* SECCIÓN LEGALES */
-.legales{
-    background:#111;
-    padding:60px;
-    text-align:center;
-    border-top:1px solid #333;
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+    text-align: left;
 }
 
-.legales h2{
-    margin-bottom:15px;
+.footer-col h4 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* FOOTER */
-.footer{
-    background:#0a0a0a;
-    padding:25px;
-    text-align:center;
-    border-top:1px solid #222;
+.footer-col ul {
+    list-style: none;
 }
 
-.footer p{
-    margin-bottom:10px;
+.footer-col ul li {
+    margin-bottom: 10px;
 }
 
-.social a{
-    margin:0 10px;
-    text-decoration:none;
-    color:#d4af37;
-    transition:0.3s;
+.footer-col ul li a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-.social a:hover{
-    color:#ffffff;
+.footer-col ul li a:hover {
+    color: var(--accent-color);
+    padding-left: 5px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: bold;
+    border: 1px solid var(--border-color);
+}
+
+.social-btn:hover {
+    background: var(--accent-color);
+    color: #000;
+    transform: translateY(-3px);
+}
+
+.newsletter input {
+    padding: 10px;
+    width: 70%;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.newsletter button {
+    padding: 10px;
+    width: 25%;
+    border: none;
+    background: var(--accent-color);
+    color: #000;
+    font-weight: bold;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* =========================================
+   MODALES (Estilos base)
+   ========================================= */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-overlay.activo {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--bg-card);
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    border: 1px solid var(--accent-color);
+    color: var(--text-main);
+}
+
+.modal-content h2 {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-secondary);
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--bg-body);
+    color: var(--text-main);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-cancel {
+    background: #555;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-confirm {
+    background: var(--accent-color);
+    color: #000;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
 }

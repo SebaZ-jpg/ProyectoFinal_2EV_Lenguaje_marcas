@@ -1,114 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relojes</title>
+    <title>Chronos - Galería Premium</title>
+    <!-- Tu hoja de estilos personalizada -->
     <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
-    
-    <div class="productos-container">
-        <!-- Header con navegación -->
-        <header class="header">
-            <div class="logo">Relojes</div>
-            <nav class="nav">
-                <a href="#inicio">Inicio</a>
-                <a href="#proyectos">Productos</a>
-                <a href="#sobre-mi">Sobre nosotros</a>
-                <a href="#contacto">Contacto</a>
-            </nav>
-        </header>
 
-        <section class="hero">
-            <h1>The Time</h1>
-            <p>No solo mide el tiempo, define tu estilo.</p>
-            <button>Ver productos</button>
-        </section>
+    <!-- HEADER: Coincide con tu clase .header del CSS -->
+    <header class="header">
+        <div class="logo">CHRONOS</div>
+        
+        <!-- Controles centrales: Buscador -->
+        <div class="buscar-container">
+            <input type="text" id="inputBusqueda" placeholder="Buscar reloj (ej. Rolex)...">
+            <button id="btnBuscar">Buscar</button>
+        </div>
 
-        <section class="relojes">
-            <h2>Estilo y calidad en cada segundo</h2>
-            <div class="relojes-grid">
-                <div class="reloj1">
-                    <img src="img/reloj1.jpg" alt="reloj1.jpg">
-                    <h3>Tissot PRX 40mm</h3>
-                    <p>Reloj inspirado en los años 70 con diseño 
-                        delgado basado en el modelo de 1978, que combina estilo 
-                        clásico con tecnología moderna. Incluye movimiento automático
-                        ofreciendo precisión y fiabilidad.</p>
-                    <p class="precio">775.99€</p>
+        <!-- Controles derecha: Tema y Añadir -->
+        <div class="header-controls">
+            <select id="selectorTema">
+                <option value="oscuro">Modo Oscuro</option>
+                <option value="claro">Modo Claro</option>
+                <option value="personalizado">Personalizar...</option>
+            </select>
+            <button id="btnAñadir">+ Nuevo Reloj</button>
+        </div>
+    </header>
+
+    <!-- MAIN: Contenedor de la galería -->
+    <main class="galeria-contenido">
+        <h2 class="titulo-seccion">Colección Exclusiva</h2>
+        
+        <!-- AQUÍ SE INYECTARÁN LAS TARJETAS DESDE EL XML -->
+        <!-- La clase .relojes-grid coincide con tu CSS para el Grid -->
+        <div class="galeria" id="contenedorTarjetas">
+            <!-- Las tarjetas se generan con JS -->
+        </div>
+    </main>
+
+    <!-- FOOTER MEJORADO: Coincide con los estilos nuevos del CSS -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Columna 1: Sobre Nosotros -->
+            <div class="footer-col">
+                <h4>Chronos Gallery</h4>
+                <p>Expertos en relojería de lujo desde 2026. Seleccione las piezas más exclusivas del mundo.</p>
+                <div class="social-links">
+                    <a href="#" class="social-btn">IG</a>
+                    <a href="#" class="social-btn">TW</a>
+                    <a href="#" class="social-btn">FB</a>
                 </div>
-
-                <div class="reloj2">
-                    <img src="img/reloj2.jpg" alt="reloj2.jpg">
-                    <h3>Tissot PR 100 40mm</h3>
-                    <p>Cronógrafo de cuarzo deportivo y elegante con varios colores, 
-                        brazalete con detalles pulidos y fecha. Usa movimiento G10.212 
-                        preciso y resistente, tiene resistencia al agua hasta 100 m y agujas 
-                        con Super-LumiNova para ver en poca luz.</p>
-                    <p class="precio">395€</p>
-                </div>
-
-                <div class="reloj3">
-                    <img src="img/reloj3.jpg" alt="reloj3.jpg">
-                    <h3>Tissot Classic Dream 42mm</h3>
-                    <p>Reloj clásico y minimalista de acero inoxidable 316L, resistente 
-                        y duradero. Incluye agujas Dauphine para fácil lectura y 
-                        brazalete intercambiable sin herramientas para mayor versatilidad.</p>
-                    <p class="precio">345€</p>
-                </div>
-
-                <div class="reloj4">
-                    <img src="img/reloj4.jpg" alt="reloj4.jpg">
-                    <h3>Tissot Seastar 1000 40mm</h3>
-                    <p>Reloj deportivo de 40 mm con movimiento Powermatic 80, 
-                        resistente al agua hasta 300 m. Tiene mejor visibilidad 
-                        con Super-LumiNova y varios modelos con distintos colores 
-                        y acabados, manteniendo un estilo deportivo y robusto.</p>
-                    <p class="precio">795€</p>
-                </div>
-
-                <div class="reloj5">
-                    <img src="img/reloj5.jpg" alt="reloj5.jpg">
-                    <h3>Tissot PRC 100 Solar 39mm</h3>
-                    <p>Reloj de 39 mm con caja de acero inoxidable y bisel dodecagonal,
-                            equipado con movimiento Solar Quartz que se recarga con luz 
-                            natural o artificial. Incluye indicador de energía y correas 
-                            intercambiables para personalizar el estilo.</p>
-                    <p class="precio">495€</p>
-                </div>
-
-                <div class="reloj6">
-                    <img src="img/reloj6.jpg" alt="reloj6.jpg">
-                    <h3>Tissot PRC 100 Solar 39mm</h3>
-                    <p>Reloj de 39 mm de acero inoxidable con diseño llamativo y 
-                        bisel dodecagonal. Funciona con movimiento Solar Quartz 
-                        que se recarga con luz y permite personalizar la correa 
-                        de 20 mm.</p>
-                    <p class="precio">495€</p>
-                </div>
-                </div>
-        </section>
-
-        <section class="legales">
-            <div class="legales-1">
-                <h2>Política de privacidad</h2>
-                <p>En Relojes, valoramos tu privacidad y nos comprometemos a proteger tus datos personales. 
-                    Esta política de privacidad describe cómo recopilamos, usamos y protegemos tu información.</p>
             </div>
-        </section>
 
-
-        <footer class="footer">
-            <p>&copy; 2026 Relojes. Todos los derechos reservados.</p>
-            <div class="social">
-                <a href="#">Instagram</a>
-                <a href="#">Tiktok</a>
-                <a href="#">Twitter</a>
+            <!-- Columna 2: Enlaces Legales -->
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Aviso Legal</a></li>
+                    <li><a href="#">Política de Privacidad</a></li>
+                    <li><a href="#">Política de Cookies</a></li>
+                    <li><a href="#">Términos y Condiciones</a></li>
+                </ul>
             </div>
-        </footer>
 
+            <!-- Columna 3: Contacto -->
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>Calle Serrano 45, Madrid</li>
+                    <li>+34 912 345 678</li>
+                    <li>info@chronosgallery.com</li>
+                </ul>
+            </div>
+
+            <!-- Columna 4: Newsletter -->
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>Suscríbete para recibir novedades.</p>
+                <form class="newsletter">
+                    <input type="email" placeholder="Tu email...">
+                    <button type="submit">OK</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            &copy; 2026 Chronos Gallery. Todos los derechos reservados. Proyecto Final LM.
+        </div>
+    </footer>
+
+    <!-- MODAL 1: Añadir Nueva Tarjeta -->
+    <div id="modalAñadir" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Añadir Nuevo Reloj</h2>
+            <form id="formNuevoReloj">
+                <div class="form-group">
+                    <label for="nuevoTitulo">Título:</label>
+                    <input type="text" id="nuevoTitulo" required placeholder="Ej. Rolex Submariner">
+                </div>
+                <div class="form-group">
+                    <label for="nuevoTexto">Descripción:</label>
+                    <textarea id="nuevoTexto" rows="4" required placeholder="Detalles del reloj..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="nuevaImagen">Imagen (Archivo):</label>
+                    <input type="file" id="nuevaImagen" accept="image/*" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="btnCancelarAñadir">Cancelar</button>
+                    <button type="submit" class="btn-confirm" id="btnConfirmarAñadir">Guardar</button>
+                </div>
+            </form>
+        </div>
     </div>
 
+    <!-- MODAL 2: Personalizar Colores -->
+    <div id="modalPersonalizar" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Personalizar Colores</h2>
+            <form id="formColores">
+                <div class="form-group">
+                    <label for="colorHeader">Color Header:</label>
+                    <input type="color" id="colorHeader" value="#00402e">
+                </div>
+                <div class="form-group">
+                    <label for="colorMain">Color Fondo Principal:</label>
+                    <input type="color" id="colorMain" value="#00402e">
+                </div>
+                <div class="form-group">
+                    <label for="colorFooter">Color Footer:</label>
+                    <input type="color" id="colorFooter" value="#0a0a0a">
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" id="btnCancelarColor">Cancelar</button>
+                    <button type="submit" class="btn-confirm" id="btnAplicarColor">Aplicar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- SCRIPT PRINCIPAL -->
+    <script src="Scripts/app.js"></script>
 </body>
 </html>

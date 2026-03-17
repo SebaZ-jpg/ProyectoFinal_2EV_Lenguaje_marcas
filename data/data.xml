@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<relojes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="data.xsd">
+
+    <reloj>
+        <titulo>Rolex Daydate Rose Gold 40mm Ombre Black 228235 Oro rosa Negro 40mm 2025</titulo>
+        <texto>El Rolex Day-Date 40 ref. 228235 en oro rosa con esfera ombré negra es la combinación perfecta de lujo y elegancia. Su exclusivo acabado en oro Everose de 18k y su distintiva esfera degradada lo convierten en una pieza sofisticada y muy deseada.</texto>
+        <imagen>img/rolex-day-time.png</imagen>
+    </reloj>
+
+    <reloj>
+        <titulo>Patek Philippe Nautilus</titulo>
+        <texto>El Patek Philippe Nautilus 5711 es uno de los relojes más icónicos y codiciados del mundo. Su diseño elegante con carácter deportivo, junto a su inconfundible esfera y acabados de alta relojería, lo convierten en una pieza única.</texto>
+        <imagen>img/nautilus.png</imagen>
+    </reloj>
+
+    <reloj>
+        <titulo>Omega Speedmaster Moonwatch</titulo>
+        <texto>El Omega Speedmaster Moonwatch Moonphase Co‑Axial Master Chronometer 44.25 mm Platinum es una obra maestra de la relojería, que combina innovación y tradición en un diseño imponente. Su caja de platino, esfera de oro y complicación de fase lunar elevan este modelo a otro nivel de exclusividad. Un reloj sofisticado, preciso y con una presencia inigualable.</texto>
+        <imagen>img/omega-speedmaster.png</imagen>
+    </reloj>
+
+    <reloj>
+        <titulo>Rolex GMT Master II</titulo>
+        <texto>El Rolex GMT-Master II es un reloj de lujo diseñado para viajeros y profesionales que necesitan seguir múltiples zonas horarias. Con su icónica función GMT, su robusta construcción y su diseño atemporal, este reloj se ha convertido en un símbolo de prestigio y funcionalidad en el mundo de la relojería.</texto>
+        <imagen>img/Rolex-GMT.png</imagen>
+    </reloj>
+
+    <reloj>
+        <titulo>Hublot Big Bang Unico Dark Green Ceramic</titulo>
+        <texto>El Hublot Big Bang Unico Dark Green Ceramic es un reloj de lujo que destaca por su diseño audaz y su innovación técnica. Con su caja de cerámica, movimiento Unico de manufactura propia y su estética vanguardista, este reloj se ha convertido en un símbolo de exclusividad y estilo en el mundo de la alta relojería.</texto>
+        <imagen>img/hublot.png</imagen>
+    </reloj>
+
+    <reloj>
+        <titulo>Jacob and Co. Astronomia Casino Roulette Tourbillon</titulo>
+        <texto>El Jacob and Co. Astronomia Casino Roulette Tourbillon es pura extravagancia y alta relojería llevadas al extremo. Su diseño tridimensional con ruleta funcional y tourbillon lo convierte en una pieza única que no pasa desapercibida. Un reloj exclusivo para quienes buscan lujo, innovación y espectáculo en la muñeca.</texto>
+        <imagen>img/jacobco.png</imagen>
+    </reloj>
+
+    <reloj>
+        <titulo>Richard Mille RM 30-01</titulo>
+        <texto>El Richard Mille RM 30-01 es un reloj de alta relojería diseñado para resistir las condiciones extremas del tenis profesional. Con su caja de titanio y carbono, su movimiento tourbillon y su diseño vanguardista, este reloj es una obra maestra de la ingeniería y la innovación, que combina resistencia, precisión y estilo en una pieza única.</texto>
+        <imagen>img/richard-mille.png</imagen>
+    </reloj>
+
+    <reloj>
+        <titulo>Tissot PRX</titulo>
+        <texto>El Tissot PRX es un reloj de lujo que combina estilo y funcionalidad en un diseño atemporal. Con su caja de acero inoxidable, esfera con indicadores de hora y minutero, y su movimiento automático, este reloj es una elección perfecta para quienes buscan calidad y durabilidad en su accesorio.</texto>
+        <imagen>img/reloj1.png</imagen>
+    </reloj>
+
+</relojes>
