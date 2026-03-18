@@ -1,31 +1,29 @@
-/* 1. Definir fuentes correctamente */
+
 @font-face {
     font-family: 'Shelten';
-    /* Asumiendo que estás en styles/ y la carpeta fonts está fuera */
+    
     src: url('../fonts/ginTonic/GinAndTonicItalic.otf') format('truetype'); 
 }
 
 @font-face {
     font-family: 'Gorgeous';
-    /* Añade aquí la ruta de tu otra fuente si la tienes */
-    src: url('../fonts/ruta-a-tu-fuente.otf') format('truetype'); 
+    
+    src: url('../fonts/cormorant/CormorantItalic.ttf') format('truetype'); 
 }
 
-/* 2. Estilos Generales */
 body {
-    font-family: 'Gorgeous', 'Segoe UI', sans-serif; /* Fallback por si no carga */
+    font-family: 'Gorgeous', 'Segoe UI', sans-serif; 
     text-align: center;
-    /* Asegúrate de que la ruta de la imagen sea correcta desde styles/ */
+    
     background-image: url('../img/rolexverde.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     height: 100vh;
     margin: 0;
-    overflow: hidden; /* Evita scroll en la página de entrada */
+    overflow: hidden; 
 }
 
-/* Capa oscura para mejorar legibilidad del texto sobre la imagen */
 body::before {
     content: '';
     position: absolute;
@@ -33,22 +31,21 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Oscurece un poco el fondo */
+    background: rgba(0, 0, 0, 0.4); 
     z-index: -1;
 }
 
 h1 {
     font-family: 'Shelten', sans-serif;
-    font-size: 100px; /* Un poco más pequeño para pantallas normales */
+    font-size: 100px; 
     -webkit-text-stroke: 2px black;
     letter-spacing: 2px;
     color: #ffffff;
     text-align: center;
-    margin-top: 15vh; /* Margen superior relativo al viewport */
+    margin-top: 15vh; 
     text-shadow: 0 5px 15px rgba(0,0,0,0.5);
 }
 
-/* Contenedor del botón para centrarlo mejor */
 .container-btn {
     margin-top: 50px;
     display: flex;
@@ -60,7 +57,7 @@ h1 {
     background: linear-gradient(135deg, rgb(44, 184, 44), rgb(1, 44, 7));
     color: rgb(255, 255, 255);
     border: 2px solid black;
-    border-radius: 50px; /* Más redondeado, estilo premium */
+    border-radius: 50px; 
     cursor: pointer;
     font-size: 22px;
     font-weight: bold;
@@ -68,14 +65,14 @@ h1 {
     letter-spacing: 1px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.4);
     transition: all 0.3s ease;
-    text-decoration: none; /* Por si usas <a> */
+    text-decoration: none; 
     display: inline-block;
     margin-top: 250px;
 }
 
-/* Animación de Rebote Mejorada */
+
 .rebound {
-    animation: rebote 2s infinite ease-in-out; /* Más lento y suave */
+    animation: rebote 0.8s infinite ease-in-out; 
 }
 
 @keyframes rebote {
@@ -83,18 +80,17 @@ h1 {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-20px); /* Menos exagerado, más elegante */
+        transform: translateY(-20px); 
     }
 }
 
-/* Efecto Hover adicional */
+
 #btnEntrar:hover {
     background: linear-gradient(135deg, rgb(60, 220, 60), rgb(10, 80, 20));
-    box-shadow: 0 0 20px rgba(44, 184, 44, 0.6); /* Brillo verde */
+    box-shadow: 0 0 20px rgba(44, 184, 44, 0.6); 
     transform: scale(1.05);
 }
 
-/* Responsividad básica para móviles */
 @media (max-width: 768px) {
     h1 { font-size: 60px; margin-top: 10vh; }
     #btnEntrar { padding: 15px 30px; font-size: 18px; }
