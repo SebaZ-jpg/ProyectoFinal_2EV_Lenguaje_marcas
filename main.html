@@ -3,23 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LAESE - Galería Premium</title>
-    <!-- Tu hoja de estilos personalizada -->
+    <title>LÆSE - Galería Premium</title>
     <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
 
-    <!-- HEADER: Coincide con tu clase .header del CSS -->
     <header class="header">
-        <div class="logo">LAESE</div>
-        
-        <!-- Controles centrales: Buscador -->
+        <div class="logo">LÆSE</div>
+
         <div class="buscar-container">
             <input type="text" id="inputBusqueda" placeholder="Buscar reloj (ej. Rolex)...">
             <button id="btnBuscar">Buscar</button>
         </div>
 
-        <!-- Controles derecha: Tema y Añadir -->
         <div class="header-controls">
             <select id="selectorTema">
                 <option value="oscuro">Modo Oscuro</option>
@@ -30,32 +26,26 @@
         </div>
     </header>
 
-    <!-- MAIN: Contenedor de la galería -->
     <main class="galeria-contenido">
         <h3 class="titulo-seccion">Colección Exclusiva</h3>
         
-        <!-- AQUÍ SE INYECTARÁN LAS TARJETAS DESDE EL XML -->
-        <!-- La clase .relojes-grid coincide con tu CSS para el Grid -->
         <div id="contenedorTarjetas" class="relojes-grid">
-            <!-- Las tarjetas se generan con JS -->
+            
         </div>
     </main>
 
-    <!-- FOOTER MEJORADO: Coincide con los estilos nuevos del CSS -->
     <footer class="footer">
         <div class="footer-content">
-            <!-- Columna 1: Sobre Nosotros -->
             <div class="footer-col">
-                <h4>LAESE Gallery</h4>
+                <h4>LÆSE Gallery</h4>
                 <p>Expertos en relojería de lujo desde 2026. Seleccione las piezas más exclusivas del mundo.</p>
                 <div class="social-links">
-                    <a href="#" class="social-btn">IG</a>
-                    <a href="#" class="social-btn">TW</a>
-                    <a href="#" class="social-btn">FB</a>
+                    <a href="#" class="social-btn">Instagram</a>
+                    <a href="#" class="social-btn">Twitter</a>
+                    <a href="#" class="social-btn">Facebook</a>
                 </div>
             </div>
 
-            <!-- Columna 2: Enlaces Legales -->
             <div class="footer-col">
                 <h4>Legal</h4>
                 <ul>
@@ -66,7 +56,6 @@
                 </ul>
             </div>
 
-            <!-- Columna 3: Contacto -->
             <div class="footer-col">
                 <h4>Contacto</h4>
                 <ul>
@@ -76,7 +65,6 @@
                 </ul>
             </div>
 
-            <!-- Columna 4: Newsletter -->
             <div class="footer-col">
                 <h4>Newsletter</h4>
                 <p>Suscríbete para recibir novedades.</p>
@@ -92,7 +80,6 @@
         </div>
     </footer>
 
-    <!-- MODAL 1: Añadir Nueva Tarjeta -->
     <div id="modalAñadir" class="modal-overlay">
         <div class="modal-content">
             <h2>Añadir Nuevo Reloj</h2>
@@ -117,7 +104,6 @@
         </div>
     </div>
 
-    <!-- MODAL 2: Personalizar Colores -->
     <div id="modalPersonalizar" class="modal-overlay">
         <div class="modal-content">
             <h2>Personalizar Colores</h2>
@@ -142,7 +128,6 @@
         </div>
     </div>
 
-    <!-- SCRIPT PRINCIPAL -->
     <script src="Script/script.js"></script>
 </body>
 </html>
