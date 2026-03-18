@@ -70,12 +70,12 @@ h1 {
     transition: all 0.3s ease;
     text-decoration: none; /* Por si usas <a> */
     display: inline-block;
-    margin-top: 250px;
+    margin-top: 400px;
 }
 
 /* Animación de Rebote Mejorada */
 .rebound {
-    animation: rebote 2s infinite ease-in-out; /* Más lento y suave */
+    animation: rebote 1s infinite ease-in-out; /* Más lento y suave */
 }
 
 @keyframes rebote {
